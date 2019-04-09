@@ -17,11 +17,14 @@
   },
   
 	  "background": {
-		"scripts": ["cont/sorter.js"]
+		"scripts": ["cont/sorter_bg.js"]
 	  },
+
   "content_scripts": [
     {"matches": ["https://www.instagram.com/"],	  
-	  "css":["cont/sorter.css"]
+	  "css":["cont/sorter.css"],
+	  "js": ["cont/sorter_main.js"],
+	"run_at": "document_end" 
     }
   ],
   "permissions": [
