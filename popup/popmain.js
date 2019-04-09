@@ -14,7 +14,10 @@ function listenForClicks() {
 	function bgcomand(tabs) {
 	//	alert('go')
 		browser.tabs.sendMessage(tabs[0].id, 
-		{command: "go"});
+		{command: "go",
+		Users:document.querySelector('input').value	
+	
+	});
 	}
 	
 	
