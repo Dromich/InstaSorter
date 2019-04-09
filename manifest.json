@@ -1,0 +1,37 @@
+{
+
+  "manifest_version": 2,
+  "name": "InstaSorter",
+  "version": "1",
+ 
+  "description": "Розширення для сортування акаунтів",
+  "icons": {
+	"32": "icons/sort_32.png",
+	"128":"icons/sort_128.png",
+	"256":"icons/sort_256.png"
+  },
+  "browser_action": {
+	"default_icon": "icons/sort_128.png",
+	"default_title": "InstaSorter",
+	"default_popup": "popup/popmain.html"
+  },
+  
+	  "background": {
+		"scripts": ["cont/sorter.js"]
+	  },
+  "content_scripts": [
+    {"matches": ["https://www.instagram.com/"],	  
+	  "css":["cont/sorter.css"]
+    }
+  ],
+  "permissions": [
+	"tabs",
+	"<all_urls>",
+	"webRequest",
+	"webRequestBlocking",
+	"webNavigation",
+	"storage",
+	"contextMenus"
+]
+
+}
