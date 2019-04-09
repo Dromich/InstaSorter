@@ -1,8 +1,10 @@
 (function() {
+	console.log("Sorter_BG HERE")
 
 	function parseLisr(string) {//розбиваєм триману строку в масив
 		let arr = string.split(',' );
 		localStorage.setItem('Sousers',JSON.stringify(arr));
+		
 		
 	};
 
@@ -11,11 +13,11 @@
 		
 		var start = localStorage.setItem('Sortstart', 'yes');
 		var Length = localStorage.setItem('SortusLe', users.length);
-		console.log(users);	
+		//console.log(users);	
 		}
 
 		function GetUsers(index) {
-			var users = JSON.parse(localStorage.getItem('users')); 
+			var users = JSON.parse(localStorage.getItem('Sousers')); 
 			return(users[index]);	
 		};// функція яка повертає нікнейм з масиву
 
@@ -29,6 +31,7 @@
 				window.location.href = 'https://www.instagram.com/';
 		
 			}else{
+				console.log('поїхали')
 				window.location.href = 'https://www.instagram.com/'+ userUrl+'/';
 			}
 			
@@ -38,14 +41,29 @@
 
 	browser.runtime.onMessage.addListener((message) => {
 	  if (message.command === "go") {
-		   console.log("LEt`S GO")
-		   
-		   parseLisr(message.Users);
+		   console.log("LEt`S GO")		   
+		   parseLisr(message.Users);//додаєм в локал базу юзерів
+		   initStart();
+		   localStorage.setItem('cuser', '0');//глобальна змінна яка встановлює індекс користувача з масиву
+
+		  let cuser = Number(localStorage.getItem('cuser')) ;
+		  console.log(GetUsers(cuser));
+
+		  setTimeout(() => {
+			goUrl(GetUsers(cuser));//перехзодимо на першого користувача
+		  
+		  }, 1000);
+		 
+
+		
+
 
 	  } else if (message.command === "reset") {
 
 console.log("Хард ресет ")
-		
+
+localStorage.setItem('Sortstart', 'no');
+localStorage.setItem('Sousers', 'off');
 		
 	  }else{
 		  console.log('Som hae wrong')

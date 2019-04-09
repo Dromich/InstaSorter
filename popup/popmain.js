@@ -15,7 +15,7 @@ function listenForClicks() {
 	//	alert('go')
 		browser.tabs.sendMessage(tabs[0].id, 
 		{command: "go",
-		Users:document.querySelector('input').value	
+		Users:document.querySelector('input').value	,
 	
 	});
 	}
