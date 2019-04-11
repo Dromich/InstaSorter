@@ -1,0 +1,44 @@
+body{
+	width: 280px;
+	height: auto;
+	background-color: #324a5e;
+	overflow: hidden;
+	
+}
+h1{
+	text-align: center;
+	color: #ffff;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all .8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+h1:hover{
+	transform: scale(1.2)
+}
+
+span{
+	text-align: center;
+	padding: 10px;
+	color: #ff7058;
+	width: 90%;
+	font-size: 18px;
+	display: block;
+	text-transform: uppercase;
+	cursor: pointer;
+	
+	margin: 5px auto;
+	transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+span:hover{
+	color: #fff;
+	background-color: #ff7058;
+}
+input{
+	width: 90%;
+	display: block;
+	margin: 10px auto;
+	border: 1px solid #ff7058;
+	border-radius: 5px;
+	background-color: #333;
+	padding: 8px;
+}
