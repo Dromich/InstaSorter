@@ -35,7 +35,8 @@
 	"webNavigation",
 	"storage",
 	"clipboardWrite",
-	"contextMenus"
+	"contextMenus",
+	"clipboardWrite"
 ]
 
 }
