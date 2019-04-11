@@ -1,6 +1,13 @@
 (function() {
 	console.log("Sorter_BG HERE")
 
+	function Bones() {//функція пустишка яка створює два пусті об'єкти
+		let arrch =[] ; 
+		
+		localStorage.setItem('goodUsers',JSON.stringify(arrch));
+		localStorage.setItem('badUsers',JSON.stringify(arrch));
+	}
+
 	function parseLisr(string) {//розбиваєм триману строку в масив
 		let arr = string.split(',' );
 		localStorage.setItem('Sousers',JSON.stringify(arr));
@@ -44,11 +51,12 @@
 		   console.log("LEt`S GO")		   
 		   parseLisr(message.Users);//додаєм в локал базу юзерів
 		   initStart();
+		   Bones();
 		   localStorage.setItem('cuser', '0');//глобальна змінна яка встановлює індекс користувача з масиву
 
 		  let cuser = Number(localStorage.getItem('cuser')) ;
 		  console.log(GetUsers(cuser));
-
+		  
 		  setTimeout(() => {
 			goUrl(GetUsers(cuser));//перехзодимо на першого користувача
 		  
