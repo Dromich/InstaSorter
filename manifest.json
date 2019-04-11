@@ -34,6 +34,7 @@
 	"webRequestBlocking",
 	"webNavigation",
 	"storage",
+	"clipboardWrite",
 	"contextMenus"
 ]
 
