@@ -45,7 +45,7 @@ console.log("I can start");
 
 	
 	function GoNext(target) {
-		if (cuser = localStorage.getItem('SortusLe')) {
+		if (cuser === localStorage.getItem('SortusLe')) {
 			alert("Всіх пройдено цей завершальний")
 			
 		}else{
