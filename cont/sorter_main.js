@@ -45,17 +45,12 @@ console.log("I can start");
 
 	
 	function GoNext(target) {
-		if (cuser === localStorage.getItem('SortusLe')) {
-			alert("Всіх пройдено цей завершальний")
-			
-		}else{
-			PushStorage(target,GetUsers(cuser))// додаєм поточного користувача до хороших чи поганих
+		PushStorage(target,GetUsers(cuser))// додаєм поточного користувача до хороших чи поганих
 			let next = cuser +1 ;
 			localStorage.setItem('cuser',next);//задаєм в локал наступного користувача
 			setTimeout(() => {
 			 goUrl(GetUsers(next))
 			}, 800);
-		}
 		
 	}//функція що виконує головну роботу (розкидає користувачів і рухає все вперед)
 
