@@ -1,6 +1,46 @@
 #react-root{
 	background-color: red!important;
 }
-
-
-
+#sorter_info h1 {
+	width: 100%;
+	display: block;
+	text-align: center;
+	padding: 0;
+	margin: 15px auto;
+	color: #ff7058;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+#sorter_info {
+	position: absolute;
+	z-index: 100;
+	width: 220px;
+	height: auto;
+	padding: 15px;
+	background-color: #324a5e;
+	top: 20px;
+	left: 20px;
+	color: #fff;
+}
+#sorter_info div {
+	display: block;
+	margin: 10px 0 0 0;
+}
+#sorter_count {
+	display: block;
+	width: 90%;
+	margin: 8px auto;
+	border-bottom: 1px solid #ff7058;
+	text-align: center;
+	text-transform: uppercase;
+}
+#sorter_count i {
+	font-size: 16px;	
+	vertical-align: top;
+	
+}
+.marker {
+	color: #ff7058;
+	font-size: 20px;
+	vertical-align: middle;
+}
