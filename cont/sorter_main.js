@@ -31,6 +31,8 @@ console.log("I can start");
 	
 		if (url==="undefined" || url==undefined ) {
 			alert("всі акаунти пройдено");
+
+			//тут треба запхати сторадж змінну що буде  викликати функцію що виводить кнопки скопювати в буфер погані \ хороші
 				
 			window.location.href = 'https://www.instagram.com/';
 	
@@ -53,6 +55,19 @@ console.log("I can start");
 			}, 800);
 		
 	}//функція що виконує головну роботу (розкидає користувачів і рухає все вперед)
+
+function GetUserList(target) {
+	let targetArr  = JSON.parse(localStorage.getItem(target)); 
+	let resultSTR = targetArr.join();
+	navigator.clipboard.writeText(resultSTR).then(function() {
+		alert('Список скопійовано в буфер обміну вставте куди потрібно Ctrl + V')
+		console.log('вдало скопійовано')	
+		  }, function() {
+			console.log('скопіювати не вдалось')	
+		  });
+
+}// функція яка копіює в буфер необхідний масив (у вигляді строки через кому)
+
 
 	function insertContent(userL,counter,goodUsers,badUsers) {
 		let status = document.getElementById("sorter_info");
