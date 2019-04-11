@@ -82,6 +82,10 @@ function GetUserList(target) {
 	<div id="sorter_progres">Пройдено акаунтів: <span class="marker"> ${counter}</span> </div>
 	<div id="goodUsers">Хороших акаунтів: <span class="marker">${goodUsers}</span></div>
 	<div id="badUsers">Поганих акаунтів : <span class="marker">${badUsers}</span></div>
+	<span>Копіювати</span>
+	<hr>
+	<div id="copy_btn_1">хороших</div>
+	<div id="copy_btn_2"> поганих</div>
 	`;
 			document.body.insertBefore(div, document.body.firstChild);
 			
@@ -119,6 +123,17 @@ function GetUserList(target) {
 
 	   insertContent(localStorage.getItem('SortusLe'),cuser,GetUsersLength('goodUsers'),GetUsersLength('badUsers'))//виводимо інформер
 
+	   
+	document.getElementById('copy_btn_1').addEventListener('click', function(event) {
+		
+		GetUserList('goodUsers');
+
+	  });
+	  document.getElementById('copy_btn_2').addEventListener('click', function(event) {
+		
+		GetUserList('badUsers');
+
+	  });
 	
 }else{
 	console.log("im wait")
