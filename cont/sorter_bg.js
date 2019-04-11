@@ -64,6 +64,7 @@ console.log("Хард ресет ")
 
 localStorage.setItem('Sortstart', 'no');
 localStorage.setItem('Sousers', 'off');
+localStorage.clear();//очищаєм локальне сховище
 		
 	  }else{
 		  console.log('Som hae wrong')
