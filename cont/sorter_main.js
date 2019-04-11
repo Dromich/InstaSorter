@@ -105,7 +105,7 @@ console.log("I can start");
 
 	
 }else{
-	console.log("must WAIT")
+	console.log("im wait")
 }
 
 
