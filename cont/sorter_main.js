@@ -32,6 +32,8 @@ console.log("I can start");
 		if (url==="undefined" || url==undefined ) {
 			alert("всі акаунти пройдено");
 
+			localStorage.setItem('CopyBtns','on');//задаєм сторадж змінну що показує кнопки
+
 			//тут треба запхати сторадж змінну що буде  викликати функцію що виводить кнопки скопювати в буфер погані \ хороші
 				
 			window.location.href = 'https://www.instagram.com/';
@@ -92,6 +94,11 @@ function GetUserList(target) {
 	</div>
 	`;
 			document.body.insertBefore(div, document.body.firstChild);
+
+			if (localStorage.getItem('CopyBtns')=== 'on') {
+				
+				document.getElementById('copy_btns').style.display = 'block';
+			}
 			
 	
 		} else {
