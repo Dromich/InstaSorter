@@ -114,7 +114,7 @@ function GetUserList(target) {
 			
 		   switch(e.keyCode){
 				
-			   case 32:  // пробіл
+			   case 16:  //  Shift
 			   GoNext('goodUsers')
 			   
 				   break;
@@ -122,10 +122,11 @@ function GetUserList(target) {
 			   GoNext('badUsers')
 				   break;
 			   case 39:   // если нажата клавиша вправо
-			   GoNext('badUsers')
+			   GoNext('goodUsers')
+			   //GoNext('badUsers')
 				   break;
 			   case 40:   // если нажата клавиша вниз
-			   GoNext('badUsers')
+			  // GoNext('badUsers')
 				   break;
 		   }
 	   }
