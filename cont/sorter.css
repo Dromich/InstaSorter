@@ -12,7 +12,7 @@
 	font-size: 18px;
 }
 #sorter_info {
-	position: absolute;
+	position: fixed;
 	z-index: 100;
 	width: 220px;
 	height: auto;
@@ -22,7 +22,7 @@
 	left: 20px;
 	color: #fff;
 }
-#sorter_info div {
+#sorter_informers div {
 	display: block;
 	margin: 10px 0 0 0;
 }
@@ -43,4 +43,31 @@
 	color: #ff7058;
 	font-size: 20px;
 	vertical-align: middle;
+}
+#copy_btns div {
+	display: inline-block ;
+	padding: 5px;
+	text-align: center;
+	width: 80px;
+	border-radius: 5px;
+	margin-left: 8px;
+	cursor: pointer;
+}
+#copy_btns span {
+	display: block;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 15px auto;
+}
+
+#copy_btn_1 {
+	background-color: green;
+}
+#copy_btn_2 {
+	background-color: red;
+}
+#copy_btns {
+	display: none ;
+	
 }
