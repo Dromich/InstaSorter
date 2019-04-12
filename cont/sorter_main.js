@@ -78,14 +78,18 @@ function GetUserList(target) {
 			div.innerHTML = `
 			<!--div id="close">X</div-->
 	<h1>Insta Sortet</h1>
+	<div id="sorter_informers">
 	<span id="sorter_count"> Загальна кількість <i> ${userL}</i></span>
 	<div id="sorter_progres">Пройдено акаунтів: <span class="marker"> ${counter}</span> </div>
 	<div id="goodUsers">Хороших акаунтів: <span class="marker">${goodUsers}</span></div>
 	<div id="badUsers">Поганих акаунтів : <span class="marker">${badUsers}</span></div>
+	</div>
+	<div id="copy_btns">
 	<span>Копіювати</span>
-	<hr>
+	
 	<div id="copy_btn_1">хороших</div>
 	<div id="copy_btn_2"> поганих</div>
+	</div>
 	`;
 			document.body.insertBefore(div, document.body.firstChild);
 			
