@@ -1,5 +1,5 @@
 (function() {
-	console.log("Sorter_BG HERE")
+	
 
 	function Bones() {//функція пустишка яка створює два пусті об'єкти
 		let arrch =[] ; 
@@ -69,14 +69,14 @@
 
 	  } else if (message.command === "reset") {
 
-console.log("Хард ресет ")
+
 
 localStorage.setItem('Sortstart', 'no');
 localStorage.setItem('Sousers', 'off');
 localStorage.clear();//очищаєм локальне сховище
 		
 	  }else{
-		  console.log('Som hae wrong')
+		  console.log('Som  wrong')
 	  }
 	});
 

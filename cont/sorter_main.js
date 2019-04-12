@@ -3,7 +3,7 @@ console.log('sorter Main Here');
 let engine = localStorage.getItem('Sortstart');
 
 if (engine === "yes") {
-console.log("I can start");
+
 
 	let cuser = Number(localStorage.getItem('cuser')) ;//поточний користувач
 
@@ -96,7 +96,7 @@ function GetUserList(target) {
 			document.body.insertBefore(div, document.body.firstChild);
 
 			if (localStorage.getItem('CopyBtns')=== 'on') {
-				
+
 				document.getElementById('copy_btns').style.display = 'block';
 			}
 			
