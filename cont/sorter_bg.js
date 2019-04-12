@@ -20,6 +20,7 @@
 		
 		var start = localStorage.setItem('Sortstart', 'yes');
 		var Length = localStorage.setItem('SortusLe', users.length);
+		localStorage.setItem('CopyBtns','off');
 		//console.log(users);	
 		}
 
