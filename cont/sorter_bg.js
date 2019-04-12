@@ -74,7 +74,7 @@
 localStorage.setItem('Sortstart', 'no');
 localStorage.setItem('Sousers', 'off');
 localStorage.clear();//очищаєм локальне сховище
-		
+	location.href='/';
 	  }else{
 		  console.log('Som  wrong')
 	  }
