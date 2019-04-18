@@ -1,10 +1,18 @@
-console.log('sorter Main Here');
+
+
 
 let engine = localStorage.getItem('Sortstart');
+
+let private = document.getElementsByClassName("rkEop");//якщо акаунт приватний то цей елемент є
+let no_page = document.getElementsByClassName("error-container");//якщо сторінку не знайдено то цей елемент є  
+let zeroAkk = document.getElementsByClassName("uL8Hv");//якщо акаунт пустий то цей елемент є
+
 
 if (engine === "yes") {
 
 
+
+	
 	let cuser = Number(localStorage.getItem('cuser')) ;//поточний користувач
 
 
@@ -54,7 +62,7 @@ if (engine === "yes") {
 			localStorage.setItem('cuser',next);//задаєм в локал наступного користувача
 			setTimeout(() => {
 			 goUrl(GetUsers(next))
-			}, 800);
+			}, 500);
 		
 	}//функція що виконує головну роботу (розкидає користувачів і рухає все вперед)
 
@@ -131,7 +139,29 @@ function GetUserList(target) {
 		   }
 	   }
 		
-	   addEventListener("keydown", moveRect);
+/////////////////////////////////////////////////
+
+if (private.length == 1 || no_page.length == 1 || zeroAkk.length == 1 ) {
+	console.log('BADDDD');
+	//bad akk function
+	window.addEventListener("keydown", moveRect);
+
+
+alert('Bad USER')
+
+	
+
+	
+
+
+}else{
+
+ window.addEventListener("keydown",  moveRect);
+
+
+	
+
+
 
 	   insertContent(localStorage.getItem('SortusLe'),cuser,GetUsersLength('goodUsers'),GetUsersLength('badUsers'))//виводимо інформер
 	   
@@ -145,6 +175,7 @@ function GetUserList(target) {
 		GetUserList('badUsers');
 
 	  });
+}
 	
 }else{
 	console.log("im wait")
