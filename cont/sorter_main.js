@@ -4,15 +4,14 @@ let engine = localStorage.getItem('Sortstart');
 if (engine === "yes") {
 
 	let butns = document.createElement('div');
+	let up = browser.extension.getURL("/res/like.png");
+	let down = browser.extension.getURL("/res/dislike.png");
 	butns.setAttribute("id", "sorter_buttons");
 	butns.innerHTML = `
 
+<span id="goodBoy"><img src="${up}" alt="up"></span>
 
-
-
-<span id="goodBoy">+</span>
-
-<spanid="badBoy">---</span>
+<span id="badBoy"><img src="${down}" alt="down"></span>
 
 
 `;
@@ -162,8 +161,8 @@ if (engine === "yes") {
 
 	if (private.length > 0 || no_page.length == 1 || zeroAkk.length == 1) {
 		console.log('BADDDD');
-		
-		
+
+
 
 
 		insertContent(localStorage.getItem('SortusLe'), cuser, GetUsersLength('goodUsers'), GetUsersLength('badUsers'))//виводимо інформер
