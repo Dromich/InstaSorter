@@ -72,10 +72,9 @@
 
 #sorter_buttons {
 	position: absolute;
-	z-index: 22;
-	width: 200px;
+	z-index: 22;	
 	height: auto;
-	background-color: #333;
+	background-color: #324a5e;
 	right: 0;
 	bottom: 10%;
 	color: #fff;
@@ -88,12 +87,15 @@
 	padding: 10px;
 	display: inline-block;
 	cursor: pointer;
+	transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-#goodBoy {
-	background-color: green;
-	border-radius: 5px;
+#sorter_buttons span:hover {
+	
+	transform: scale(1.18)
 }
-#badBoy {
-	background-color: red;
-	border-radius: 5px;
+#sorter_buttons img {
+	max-width: 40px;
+}
+#goodBoy, #badBoy  {
+	padding: 5px;
 }
