@@ -8,12 +8,8 @@ if (engine === "yes") {
 	let down = browser.extension.getURL("res/dislike.png");
 	butns.setAttribute("id", "sorter_buttons");
 	butns.innerHTML = `
-
+	<span id="badBoy"><img src="${down}" alt="down"></span>
 <span id="goodBoy"><img src="${up}" alt="up"></span>
-
-<span id="badBoy"><img src="${down}" alt="down"></span>
-
-
 `;
 	document.body.insertBefore(butns, document.body.firstChild);
 
@@ -168,6 +164,13 @@ if (engine === "yes") {
 
 
 	} else {
+
+		document.getElementById('goodBoy').addEventListener("click",() => {
+			GoNext('goodUsers')
+		} );
+		document.getElementById('badBoy').addEventListener("click",() => {
+			GoNext('badUsers')
+		} );
 
 		window.addEventListener("keydown", moveRect);
 
