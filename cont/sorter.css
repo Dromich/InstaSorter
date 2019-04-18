@@ -69,3 +69,31 @@
 	display: none ;
 	
 }
+
+#sorter_buttons {
+	position: absolute;
+	z-index: 22;
+	width: 200px;
+	height: auto;
+	background-color: #333;
+	right: 0;
+	bottom: 10%;
+	color: #fff;
+	text-align: center;
+	display: block;
+	padding: 10px;
+}
+#sorter_buttons span {
+	
+	padding: 10px;
+	display: inline-block;
+	cursor: pointer;
+}
+#goodBoy {
+	background-color: green;
+	border-radius: 5px;
+}
+#badBoy {
+	background-color: red;
+	border-radius: 5px;
+}
