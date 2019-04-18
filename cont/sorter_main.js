@@ -4,8 +4,8 @@ let engine = localStorage.getItem('Sortstart');
 if (engine === "yes") {
 
 	let butns = document.createElement('div');
-	let up = browser.extension.getURL("/res/like.png");
-	let down = browser.extension.getURL("/res/dislike.png");
+	let up = browser.extension.getURL("res/like.png");
+	let down = browser.extension.getURL("res/dislike.png");
 	butns.setAttribute("id", "sorter_buttons");
 	butns.innerHTML = `
 
@@ -18,17 +18,10 @@ if (engine === "yes") {
 	document.body.insertBefore(butns, document.body.firstChild);
 
 
-
-
-
-
-
 	let cuser = Number(localStorage.getItem('cuser'));//поточний користувач
 	let private = document.getElementsByClassName("VIsJD");//якщо акаунт приватний то цей елемент є
 	let no_page = document.getElementsByClassName("error-container");//якщо сторінку не знайдено то цей елемент є  
 	let zeroAkk = document.getElementsByClassName("uL8Hv");//якщо акаунт пустий то цей елемент є
-
-
 
 
 	function PushStorage(object, item) {
