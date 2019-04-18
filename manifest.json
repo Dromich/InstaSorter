@@ -37,6 +37,11 @@
 	"clipboardWrite",
 	"contextMenus"
 	
-]
+],
+"web_accessible_resources": [
+    "res/like.png",
+    "res/dislike.png"
+   
+  ]
 
 }
