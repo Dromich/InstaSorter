@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "InstaSorter",
-  "version": "1",
+  "version": "1.2",
  
   "description": "Розширення для сортування акаунтів",
   "icons": {
@@ -24,7 +24,7 @@
     {"matches": ["https://www.instagram.com/*"],	  
 	  "css":["cont/sorter.css"],
 	  "js": ["cont/sorter_main.js"],
-	"run_at": "document_end" 
+	"run_at": "document_idle" 
     }
   ],
   "permissions": [
