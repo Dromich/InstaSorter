@@ -37,7 +37,7 @@
 	vertical-align: top;
 	
 }
-.marker {
+#sorter_info .marker {
 	color: #ff7058;
 	font-size: 20px;
 	vertical-align: middle;
